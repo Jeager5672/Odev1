@@ -1,10 +1,12 @@
 from password import passwords
+from timer import counter
 class Info:
     def __init__(self):
         self.authenticate()
     def authenticate(self):
         while True:
-            x = int(input("Enter your password: "))
+            counter.countdown(5)
+            x = int(input("\nEnter your password: "))
             if x in passwords.list:
                 print("Welcome Aboard")
                 break
